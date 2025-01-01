@@ -1,6 +1,7 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import connectDB from './config/database.js';
+import setupSwagger from './utils/swaggerConfig.js'
 
 // Rutas
 import usersRouter from './routes/users.router.js';
@@ -24,4 +25,6 @@ app.use('/api/sessions',sessionsRouter);
 
 app.use('/api/mocks', mocksRouter)
 
+setupSwagger(app)
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`))
+export default app

@@ -1,5 +1,12 @@
 # PRIMERA PRE ENTREGA - BACKEND 3
 
+## Imagen DockerHUB
+- URL imágen Docker: https://hub.docker.com/r/maxicuello/backend3_entrega
+    * Clonar imágen: 
+    ```bash 
+    docker pull maxicuello/backend3_entrega
+    ```
+
 ## REQUISITOS
 
 - MongoDB
@@ -68,3 +75,26 @@ Pets:
 
 * PETS EN MONGO
 ![Imagen users](./src/public/img/PetsMongo.jpg)
+
+## SWAGGER
+### Para ver la documentación de los endpoints `users`, abrir en el navegador: 
+
+```bash
+http://localhost:8080/api-docs
+```
+![Imagen users](./src/public/img/swagger.jpg)
+
+## TESTING
+### Tests funcionales
+
+1. ejecuta los test
+```bash
+npm test
+```
+2. Pruebas inlcuidas
+    * **Router `adoption.test.js`** 
+        - GET `/api/mocks/mockingusers`
+        - GET `/api/mocks/mockingusers?num=${num}`
+        - GET `/api/mocks/mockingpets`
+        - GET `/api/mocks/mockingpets?num=${num}`
+        - GET `/api/mocks/generateData`
